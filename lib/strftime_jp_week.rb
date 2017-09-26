@@ -10,7 +10,7 @@ module StrftimeJPWeek
     if format.nil?
       super()
     else
-      super(format.gsub("%jpw", JP_WEEK[wday]))
+      super(format.gsub("%jw", JP_WEEK[wday]))
     end
   end
 end
