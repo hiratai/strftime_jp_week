@@ -1,8 +1,6 @@
 # StrftimeJPWeek
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/strftime_jp_week`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Extend Date#strftime, Time#strftime, DateTime#strftime for the JP week format.
 
 ## Installation
 
@@ -22,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can use `%jw` as a place holder 
+
+```ruby
+Date.today.strftime("%Y/%m/%d(%jw)")
+# => 2017/09/26(火)
+```
+```ruby
+Time.now.strftime("%Y/%m/%d(%jw) %H:%m")
+# => 2017/09/26(火) 18:00
+```
+```ruby
+DateTime.now.strftime("%Y/%m/%d(%jw) %H:%m")
+# => 2017/09/26(火) 18:00
+```
 
 ## Development
 
@@ -32,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/strftime_jp_week. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hiratai/strftime_jp_week. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
